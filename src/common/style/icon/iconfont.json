@@ -1,0 +1,58 @@
+{
+  "id": "1866382",
+  "name": "Project",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "Project",
+  "glyphs": [
+    {
+      "icon_id": "15056455",
+      "name": "心",
+      "font_class": "xin",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "15056486",
+      "name": "闪电",
+      "font_class": "shandian",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "15056487",
+      "name": "锁头",
+      "font_class": "suotou",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "15056488",
+      "name": "扩大",
+      "font_class": "kuoda",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "15056495",
+      "name": "音符",
+      "font_class": "yinfu",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "15056496",
+      "name": "云",
+      "font_class": "yun",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "15099253",
+      "name": "扳子",
+      "font_class": "banzi",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    }
+  ]
+}

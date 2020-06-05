@@ -8,20 +8,18 @@ let routes = keys.reduce((initial, key) => {
     let module = context(key);
     return initial.concat(module instanceof Array ? module : module.default)
 }, []);
-const DynamicLayout = () => import('@/layout')
+const DynamicLayout = () => import('@/layout');
 const router = new VueRouter({
     mode: "history",
     routes: [
         {
             path: '/',
-            // name: 'home',
-            // redirect: 'menu',
+            redirect:"/moduleOne",
             component: DynamicLayout,
             children: [
                 ...routes
             ]
         },
-
     ]
 });
 

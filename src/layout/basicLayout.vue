@@ -1,13 +1,47 @@
 <template>
-    <div>basicLayout</div>
+    <div class="basiclayout">
+        <header class="header">
+            <img :src="require('@/assets/logo.jpg')" alt="">
+            <span class="iconfont iconshandian iconOtherstyle"></span>
+        </header>
+        <div class="main">
+            <router-view></router-view>
+        </div>
+    </div>
 </template>
-
 <script>
     export default {
         name: "basicLayout"
     }
 </script>
+<style scoped lang="less">
+    .basiclayout {
+        height: 100%;
+        width: 100%;
+    }
 
-<style scoped>
+    .header {
+        width: 100%;
+        height: 50px;
+        vertical-align: middle;
+
+        img {
+            vertical-align: middle;
+            width: 80px;
+            height: 100%;
+        }
+
+        .iconOtherstyle {
+            font-size: 25px;
+            color: #f5326a;
+            vertical-align: middle;
+        }
+    }
+
+    .main {
+        height: calc(~"100% - 50px");
+        width: 100%;
+    }
+
 
 </style>
