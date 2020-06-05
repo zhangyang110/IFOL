@@ -2,7 +2,9 @@
     <div class="basiclayout">
         <header class="header">
             <img :src="require('@/assets/logo.jpg')" alt="">
+            <span>阿里图标库 demo <span style="font-size:30px">☞☞</span></span>
             <span class="iconfont iconshandian iconOtherstyle"></span>
+            <span style="margin-left: 30px">basicLayout</span>
         </header>
         <div class="main">
             <router-view></router-view>

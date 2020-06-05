@@ -14,7 +14,7 @@ const router = new VueRouter({
     routes: [
         {
             path: '/',
-            redirect:"/moduleOne",
+            redirect:"/home",
             component: DynamicLayout,
             children: [
                 ...routes
