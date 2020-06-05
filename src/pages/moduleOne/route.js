@@ -2,8 +2,7 @@ const route = [
     {
         path: 'moduleOne',
         name: 'moduleOne',
-        component:()=>import("./onePage"),
+        component: () => import("./onePage"),
     }
-
-]
+];
 export default route;
