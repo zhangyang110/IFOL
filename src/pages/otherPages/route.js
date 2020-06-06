@@ -2,7 +2,10 @@ const route = [
     {
         path: 'echartsPage',
         name: 'echartsPage',
-        title:"图表",
+        desc:{
+            title:'echarts',
+            iconClassname:'el-icon-s-data',
+        },
         meta:{
             layout:'menuLayout'
         },
@@ -11,7 +14,10 @@ const route = [
     {
         path: 'd3Page',
         name: 'd3Page',
-        title:"d3",
+        desc:{
+            title:'d3.js',
+            iconClassname:'el-icon-share',
+        },
         meta:{
             layout:'menuLayout'
         },
@@ -20,7 +26,10 @@ const route = [
     {
         path: 'threeJS',
         name: 'threeJS',
-        title:"threeJS",
+        desc:{
+            title:'three.js',
+            iconClassname:'el-icon-position',
+        },
         meta:{
             layout:'menuLayout'
         },

@@ -1,24 +1,21 @@
 import Vue from "vue"
 import Vuex from "vuex"
 import createLogger from "vuex/dist/logger";
-
 Vue.use(Vuex);
-
-
 export default new Vuex.Store({
-    state:{
-        count:1
+    state: {
+        contentWidth: 0,
+        contentHeight: 0,
     },
-    mutations:{
-        increment(state){
-            state.count++
-        },
+    mutations: {
+        setContent(state, {contentWidth, contentHeight}) {
+            state.contentWidth = contentWidth;
+            state.contentHeight = contentHeight;
+        }
     },
-    getters:{
-
-    },
-    actions:{},
-    plugins:[createLogger()]
+    getters: {},
+    actions: {},
+    plugins: [createLogger()]
 })
 
 

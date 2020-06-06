@@ -6,14 +6,31 @@
             <span class="iconfont iconshandian iconOtherstyle"></span>
             <span style="margin-left: 30px">basicLayout</span>
         </header>
-        <div class="main">
+        <div class="main" ref="content">
+            <!--            <div>{{logstate}}</div>-->
             <router-view></router-view>
         </div>
     </div>
 </template>
 <script>
+    import minx from "./minx";
+    // import { mapState } from 'vuex'
+
+
     export default {
-        name: "basicLayout"
+        name: "basicLayout",
+        mixins: [minx],
+        // computed:{
+        //     ...mapState({
+        //         contentWidth:state=>state.contentWidth,
+        //         contentHeight:state=>state.contentHeight,
+        //     }),
+        //     logstate(){
+        //         console.log(this.contentWidth);
+        //         console.log(this.contentHeight);
+        //         return 1
+        //     }
+        // },
     }
 </script>
 <style scoped lang="less">
@@ -26,6 +43,7 @@
         width: 100%;
         height: 50px;
         vertical-align: middle;
+        background: darkgray;
 
         img {
             vertical-align: middle;

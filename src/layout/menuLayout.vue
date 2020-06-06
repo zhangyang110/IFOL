@@ -6,6 +6,7 @@
                     class="el-menu-vertical-demo"
                     background-color="#545c64"
                     text-color="#fff"
+                    :router="true"
                     active-text-color="#ffd04b">
                 <!--                <el-submenu index="1">-->
                 <!--                    <template slot="title">-->
@@ -42,31 +43,40 @@
                               :index="`${index}`"
                               :key="index"
                               :route="item.path">
-                    <i class="el-icon-setting"></i>
-                    <span slot="title">{{item.title}}</span>
+                    <i :class="item.desc.iconClassname"></i>
+                    <span slot="title">{{item.desc.title}}</span>
                 </el-menu-item>
             </el-menu>
         </div>
         <div class="main">
-            <router-view></router-view>
+            <div class="content" ref="content">
+                <router-view ></router-view>
+            </div>
+<!--            <div>{{logstate}}</div>-->
         </div>
     </div>
 </template>
 <script>
     import routes from "@/pages/otherPages/route.js"
+    import minx from "./minx"
 
-    console.log(routes);
     export default {
         name: "menuLayout",
+        mixins:[minx],
         data(){
             return {
-                defaultActive:'0',
             }
         },
         computed: {
+
             menus() {
                 return routes
-            }
+            },
+            defaultActive(){
+                let index= routes.findIndex(v=>v.name==this.$route.name)
+                return `${index}`
+            },
+
         }
     }
 </script>
@@ -88,5 +98,13 @@
 
     .main {
         flex: auto;
+        padding:20px;
+        background: #F4F5F7;
+        .content{
+            width: 100%;
+            height: 100%;
+            background: white;
+            position: relative;
+        }
     }
 </style>

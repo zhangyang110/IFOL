@@ -9,12 +9,19 @@ let routes = keys.reduce((initial, key) => {
     return initial.concat(module instanceof Array ? module : module.default)
 }, []);
 const DynamicLayout = () => import('@/layout');
+/**created by ZhangY on 2020/6/6
+*@desc 兼容 重复路由跳转报错问题
+*/
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err)
+};
 const router = new VueRouter({
     mode: "history",
     routes: [
         {
             path: '/',
-            redirect:"/home",
+            redirect: "/home",
             component: DynamicLayout,
             children: [
                 ...routes

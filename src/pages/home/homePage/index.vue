@@ -1,5 +1,5 @@
 <template>
-    <el-button type="info" plain @click="go">页面跳转</el-button>
+    <el-button type="info" plain @click="go">其他layout</el-button>
 </template>
 <script>
     export default {
