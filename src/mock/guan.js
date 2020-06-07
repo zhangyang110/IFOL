@@ -31,7 +31,6 @@ export default {
                 user_area_code:'区县乡镇code'
             }));
         }
-        console.log(ret);
         return ret;
     },
 }

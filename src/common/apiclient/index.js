@@ -1,45 +1,36 @@
 import axios from 'axios'
-let http = axios.create({
-    baseURL: 'http://localhost:8080/',
-    withCredentials: true,
+import { Message, Loading } from 'element-ui'
+const ConfigBaseURL = 'https://localhost:8080/'//默认路径，这里也可以使用env来判断环境
+let loadingInstance = null //这里是loading
+//使用create方法创建axios实例
+export const Service = axios.create({
+    timeout: 7000, // 请求超时时间
+    baseURL: ConfigBaseURL,
+    method: 'post',
     headers: {
-        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
-    },
-    transformRequest: [function (data) {
-        let newData = '';
-        for (let k in data) {
-            if (data.hasOwnProperty(k) === true) {
-                newData += encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) + '&';
-            }
-        }
-        return newData;
-    }]
-});
-
-function apiAxios(method, url, params, response) {
-    http({
-        method: method,
-        url: url,
-        data: method === 'POST' || method === 'PUT' ? params : null,
-        params: method === 'GET' || method === 'DELETE' ? params : null,
-    }).then(function (res) {
-        response(res);
-    }).catch(function (err) {
-        response(err);
-    })
-}
-
-export default {
-    get: function (url, params, response) {
-        return apiAxios('GET', url, params, response)
-    },
-    post: function (url, params, response) {
-        return apiAxios('POST', url, params, response)
-    },
-    put: function (url, params, response) {
-        return apiAxios('PUT', url, params, response)
-    },
-    delete: function (url, params, response) {
-        return apiAxios('DELETE', url, params, response)
+        'Content-Type': 'application/json;charset=UTF-8'
     }
-}
+})
+// 添加请求拦截器
+Service.interceptors.request.use(config => {
+    loadingInstance = Loading.service({
+        lock: true,
+        text: 'loading...'
+    })
+    return config
+})
+// 添加响应拦截器
+Service.interceptors.response.use(response => {
+    loadingInstance.close()
+    return response.data
+}, error => {
+    console.log('TCL: error', error)
+    const msg = error.Message !== undefined ? error.Message : ''
+    Message({
+        message: '网络错误' + msg,
+        type: 'error',
+        duration: 3 * 1000
+    })
+    loadingInstance.close()
+    return Promise.reject(error)
+})
