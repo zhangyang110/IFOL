@@ -8,6 +8,8 @@ import '@/common/style/index.less';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import echarts from 'echarts'
+//模拟数据
+import './mock'
 Vue.config.productionTip = false;
 Vue.prototype.moment = moment;
 Vue.prototype.$echarts = echarts
