@@ -1,3 +1,6 @@
+/**created by ZhangY on 2020/6/8
+*@desc 这个apiclient 是网络上找的 简版
+*/
 import axios from 'axios'
 import { Message, Loading } from 'element-ui'
 const ConfigBaseURL = 'https://localhost:8080/'//默认路径，这里也可以使用env来判断环境
