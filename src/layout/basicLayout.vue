@@ -1,36 +1,15 @@
 <template>
     <div class="basiclayout">
-        <header class="header">
-            <img :src="require('@/assets/logo.jpg')" alt="">
-            <span>阿里图标库 demo <span style="font-size:30px">☞☞</span></span>
-            <span class="iconfont iconshandian iconOtherstyle"></span>
-            <span style="margin-left: 30px">basicLayout</span>
-        </header>
         <div class="main" ref="content">
-            <!--            <div>{{logstate}}</div>-->
             <router-view></router-view>
         </div>
     </div>
 </template>
 <script>
     import minx from "./minx";
-    // import { mapState } from 'vuex'
-
-
     export default {
         name: "basicLayout",
         mixins: [minx],
-        // computed:{
-        //     ...mapState({
-        //         contentWidth:state=>state.contentWidth,
-        //         contentHeight:state=>state.contentHeight,
-        //     }),
-        //     logstate(){
-        //         console.log(this.contentWidth);
-        //         console.log(this.contentHeight);
-        //         return 1
-        //     }
-        // },
     }
 </script>
 <style scoped lang="less">
@@ -59,7 +38,7 @@
     }
 
     .main {
-        height: calc(~"100% - 50px");
+        height: 100%;
         width: 100%;
     }
 

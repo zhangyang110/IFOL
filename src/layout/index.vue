@@ -1,16 +1,12 @@
 <template>
     <component :is="layout"></component>
 </template>
-
 <script>
     import basicLayout from "./basicLayout";
-    import menuLayout from "./menuLayout";
-
     export default {
         name: "layout",
         components: {
             basicLayout,
-            menuLayout,
         },
         computed: {
             layout() {
