@@ -7,13 +7,21 @@
             </div>
             <em class="title_eng">home·textiles</em>
         </div>
-        <el-carousel :interval="4000" type="card" height="300px">
-            <el-carousel-item v-for="(item,index) in bannerList" :key="index">
-                <a href="javascript:;" class="banner_a">
-                    <img :src="item.src" alt="" class="banner_img">
-                </a>
-            </el-carousel-item>
-        </el-carousel>
+        <div class="carouselContainer">
+            <el-carousel :interval="4000" type="card" height="300px">
+                <el-carousel-item v-for="(item,index) in bannerList" :key="index">
+                    <a href="javascript:;" class="banner_a">
+                        <img :src="item.src" alt="" class="banner_img">
+                    </a>
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <div class="descContainer">
+            <span style="font-family: 幼圆; font-size: 24px; color: rgb(89, 59, 35);"><strong style="font-weight: bold">匠心精神</strong></span>
+            <span style="font-size: 20px; color: rgb(190, 167, 139); text-transform: uppercase;">INGENUITY</span>
+            <span class="line"></span>
+        </div>
+
     </div>
 </template>
 <script>
@@ -24,19 +32,19 @@
             return {
                 bannerList: [
                     {
-                        src:require("@/assets/banner1.jpg")
+                        src: require("@/assets/banner1.jpg")
                     },
                     {
-                        src:require("@/assets/banner2.jpg")
+                        src: require("@/assets/banner2.jpg")
                     },
                     {
-                        src:require("@/assets/banner3.jpg")
+                        src: require("@/assets/banner3.jpg")
                     },
                     {
-                        src:require("@/assets/banner5.jpg")
+                        src: require("@/assets/banner5.jpg")
                     },
                     {
-                        src:require("@/assets/banner6.jpg")
+                        src: require("@/assets/banner6.jpg")
                     }
                 ]
             }
@@ -97,15 +105,52 @@
     }
 
 
-    .banner_a{
-        width:100%;
-        height: 100%;
-    }
-    .banner_img{
-        width:100%;
+    .banner_a {
+        width: 100%;
         height: 100%;
     }
 
+    .banner_img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carouselContainer {
+        width: 100%;
+        background-color: white;
+    }
+
+    .descContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f5f5f5;
+        padding: 40px 0;
+
+        & > span {
+            line-height: 140%;
+        }
+    }
+
+    .line {
+        width: 100px;
+        height: 2px;
+        background-color: #bea78b;
+        border-radius: 1px;
+        position: relative;
+        margin: 5px;
+    }
+
+    .line::after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        left: 50%;
+        top: 50%;
+        background-color: #bea78b;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
 
     .scrollContainer /deep/ {
         .el-carousel__item h3 {
