@@ -23,24 +23,24 @@
                 productsList: [
                     {
                         src: require("@/assets/list1.jpg"),
-                        name: "name1",
+                        name: "塔琳娜抗菌鹅绒春秋被/冬被",
                     },
 
                     {
                         src: require("@/assets/list2.jpg"),
-                        name: "miaoshubunengtaichang",
+                        name: "白鹭晨曦四件套",
                     },
                     {
                         src: require("@/assets/list3.jpg"),
-                        name: "miaoshubunengtaichang",
+                        name: "静沐暖阳四件套",
                     },
                     {
                         src: require("@/assets/list4.jpg"),
-                        name: "miaoshubunengtaichang",
+                        name: "情定法兰西四/六/十件套",
                     },
                     {
                         src: require("@/assets/list5.jpg"),
-                        name: "miaoshubunengtaichang",
+                        name: "爱尔柏塔四件套",
                     },
                 ]
             }
