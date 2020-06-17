@@ -109,7 +109,7 @@
         height: 80px;
         width: 100%;
         padding: 20px 0;
-        font: 40px Arial, "宋体", Helvetica, sans-serif, Verdana;
+        font: 40px "幼圆", Arial, "宋体", Helvetica, sans-serif, Verdana;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -120,11 +120,12 @@
     .title {
         font: inherit;
         line-height: 1em;
+        font-weight: 1000;
 
         .haveDot {
             padding-right: 20px;
             position: relative;
-            font-family: 幼圆;
+            font: inherit;
         }
 
         .haveDot::after {
