@@ -48,17 +48,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="ingenuity_right"></div>
+                <div class="ingenuity_right">
+                    <div class="masker">
+                        <img src="~@/assets/jijianshenghuo.png" alt="">
+                        <span style="margin-top: 20px">简色生活，我们追求的目标</span>
+                        <span>家纺行业的新贵一族。回归自然与纯粹</span>
+                        <span>享受高品质生活，深受年轻人士的喜爱</span>
+                        <span>摒弃琐碎的极简主义，呈现现代雅痞风貌</span>
+                    </div>
+                </div>
             </div>
 
         </div>
-
+        <Products/>
     </div>
 </template>
 <script>
+    import Products from "./products"
 
     export default {
         name: "homePage",
+        components: {
+            Products,
+        },
         data() {
             return {
                 bannerList: [
@@ -197,9 +209,48 @@
         height: 400px;
     }
 
+    .ingenuity_right {
+        background: url("~@/assets/associated_brand_bg1.jpg") no-repeat;
+        background-size: 100% 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ingenuity_right:hover > .masker {
+        left: 0;
+        opacity: 1;
+    }
+
+    .masker {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(190, 167, 139);
+        left: -100%;
+        opacity: 0;
+        /*opacity: 1;*/
+        /*left: 0;*/
+        position: absolute;
+        transition: left 1s, opacity 1s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 190px;
+            height: 70px;
+        }
+
+        span {
+            color: white;
+            font: 18px '幼圆', "宋体", Helvetica, sans-serif, Verdana;
+            line-height: 2.6em;
+        }
+    }
+
     .ingenuity_main {
         height: calc(~"100% - 26px - 20px");
         padding: 20px 30px 0 0;
+        overflow: hidden;
     }
 
     .Cable {
@@ -254,4 +305,5 @@
             background-color: #d3dce6;
         }
     }
+
 </style>
