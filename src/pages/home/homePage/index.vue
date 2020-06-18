@@ -61,15 +61,21 @@
 
         </div>
         <Products/>
+        <el-backtop target=".scrollContainer">
+            <i class="el-icon-arrow-up"></i>
+        </el-backtop>
+        <Foot/>
     </div>
 </template>
 <script>
     import Products from "./products"
+    import Foot from "./foot"
 
     export default {
         name: "homePage",
         components: {
             Products,
+            Foot,
         },
         data() {
             return {
