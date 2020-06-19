@@ -1,12 +1,5 @@
 <template>
     <div class="footContainer">
-        <!--                <ul class="head">-->
-        <!--                    <li class="myposition">-->
-        <!--                        <span class="iconfont icon-weizhi1 "></span>-->
-        <!--                        <span>位置地图</span>-->
-        <!--                   -->
-        <!--                    </li>-->
-        <!--                </ul>-->
         <div style="display: flex;justify-content: space-around">
             <ul v-for="(d,i) in footList" :key="i" class="allUls">
                 <li v-for="(item,index) in d"
