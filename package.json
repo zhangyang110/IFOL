@@ -17,11 +17,13 @@
     "lodash": "^4.17.15",
     "mockjs": "^1.1.0",
     "moment": "^2.26.0",
+    "monaco-editor": "^0.20.0",
     "three": "^0.117.1",
     "three-css2drender": "^1.0.0",
     "three-obj-mtl-loader": "^1.0.3",
     "three-orbit-controls": "^82.1.0",
     "vue": "^2.6.11",
+    "vue-amap": "^0.5.10",
     "vue-router": "^3.3.2",
     "vuex": "^3.4.0",
     "vuex-router-sync": "^5.0.0"

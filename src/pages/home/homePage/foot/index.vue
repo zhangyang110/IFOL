@@ -35,7 +35,7 @@
                     <i class="iconfont icon-dianhua"></i>
                     <span>17692708968</span>
                 </li>
-                <li class="myposition">
+                <li class="myposition" @click="goMap">
                     <span class="iconfont icon-weizhi1 "></span>
                     <span>位置地图</span>
                 </li>
@@ -62,7 +62,11 @@
                 ]
             }
         },
-        methods: {}
+        methods: {
+            goMap(){
+                this.$router.push({name:'positionMap'})
+            }
+        }
     }
 </script>
 

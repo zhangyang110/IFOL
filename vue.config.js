@@ -10,6 +10,7 @@ module.exports = {
     assetsDir: "static",
     devServer: {
         port: 8080,
+        open:true,
         proxy: {
             "/api": {
                 target: "http://192.168.43.1",
@@ -28,6 +29,6 @@ module.exports = {
         config.resolve.alias
             .set("@", resolve("src"))
             .set("@static", resolve("static"))
-    }
+    },
 };
 
