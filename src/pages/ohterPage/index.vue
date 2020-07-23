@@ -4,24 +4,10 @@
             <el-tab-pane :lazy="true">
                 <span slot="label"><i class="el-icon-document"></i> HTML</span>
                 <MyEditor
-                        :language="'html'"
+                        :language="'json'"
                         :codes="htmlCodes"
                         @onMounted="htmlOnMounted"
                         @onCodeChange="htmlOnCodeChange" />
-            </el-tab-pane>
-            <el-tab-pane label="Javascript" :lazy="true">
-                <MyEditor
-                        :language="'javascript'"
-                        :codes="javascriptCodes"
-                        @onMounted="javascriptOnMounted"
-                        @onCodeChange="javascriptOnCodeChange" />
-            </el-tab-pane>
-            <el-tab-pane label="CSS" :lazy="true">
-                <MyEditor
-                        :language="'css'"
-                        :codes="cssCodes"
-                        @onMounted="cssOnMounted"
-                        @onCodeChange="cssOnCodeChange" />
             </el-tab-pane>
         </el-tabs>
     </div>
@@ -35,12 +21,14 @@
         },
         data () {
             return {
-                htmlCodes:'<div>This is html</div>',
+                htmlCodes:'[{"name":"name"},{"name":"name"},{"name":"name"},{"name":"name"}]',
                 javascriptCodes:'console.log("This is javascript")',
+                jsonCodes:'console.log("This is javascript")',
                 cssCodes:'body{}',
                 htmlEditor:null,
                 jsEditor:null,
                 cssEditor:null,
+                jsonEditor:[{"name":"name"},{"name":"name"},{"name":"name"},{"name":"name"}],
             }
         },
         methods:{
@@ -53,7 +41,7 @@
             cssOnMounted(edit){
                 this.cssEditor = edit;
             },
-            // htmlOnCodeChange(value,event){},
+            htmlOnCodeChange(){},
             // javascriptOnCodeChange(value,event){},
             // cssOnCodeChange(value,event){},
         }

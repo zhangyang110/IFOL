@@ -4,6 +4,8 @@ const path = require("path");
 // const env = process.env.NODE_ENV;
 const resolve = (dir) => path.join(__dirname, './', dir);
 // let publicPath=env==="production"?""
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
+
 module.exports = {
     publicPath: '',
     outputDir: 'dist',
@@ -30,5 +32,12 @@ module.exports = {
             .set("@", resolve("src"))
             .set("@static", resolve("static"))
     },
+    configureWebpack: {
+        plugins: [
+            new MonacoWebpackPlugin({
+                languages: ['javascript', 'css', 'html', 'typescript', 'json']
+            })
+        ]
+    }
 };
 

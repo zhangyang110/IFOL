@@ -94,12 +94,12 @@
                 address: null,
                 searchKey: '',
                 amapManager,
-                markers: [],
+                markers: [[115.037078, 37.207821]],
                 searchOption: {
                     city: '全国',
                     citylimit: true
                 },
-                center: [121.329402, 31.228667],
+                center: [115.037078, 37.207821],
                 zoom: 17,
                 lng: 0,
                 lat: 0,
