@@ -36,7 +36,7 @@ module.exports = {
         plugins: [
             new MonacoWebpackPlugin({
                 languages: ['javascript', 'css', 'html', 'typescript', 'json']
-            })
+            }),
         ]
     }
 };
