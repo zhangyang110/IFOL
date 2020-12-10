@@ -1,4 +1,4 @@
-# learn-geodo-vue
+# IFOL
 
 ## Project setup
 ```
