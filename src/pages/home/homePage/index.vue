@@ -10,7 +10,7 @@
         <div class="carouselContainer">
             <el-carousel :interval="4000" type="card" height="300px">
                 <el-carousel-item v-for="(item,index) in bannerList" :key="index">
-                    <a href="javascript:;" class="banner_a">
+                    <a href="javascript:;" class="banner_a" @click="goDetail">
                         <img :src="item.src" alt="" class="banner_img">
                     </a>
                 </el-carousel-item>
@@ -90,15 +90,19 @@
                         src: require("@/assets/banner3.jpg")
                     },
                     {
-                        src: require("@/assets/banner5.jpg")
+                        src: require("@/assets/banner4.jpg")
                     },
                     {
-                        src: require("@/assets/banner6.jpg")
+                        src: require("@/assets/banner5.jpg")
                     }
                 ]
             }
         },
-        methods: {}
+         methods:{
+            goDetail(){
+                this.$router.push({path:'/productDetail'})
+            }
+        }
     }
 </script>
 <style scoped lang="less">

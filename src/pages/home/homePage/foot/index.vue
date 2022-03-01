@@ -11,27 +11,28 @@
                 <li>
                     <span>关注我们</span>
                 </li>
-                <li class="wechat">
+                <li class="wechat commonClass">
+                    <img src="~@/assets/wechatCode.jpg" alt="">
                     <i class="iconfont icon-wechat"></i>
                     <span>微信</span>
                 </li>
-                <li class="weibo">
+                <li class="weibo commonClass">
                     <i class="iconfont icon-weibo"></i>
                     <span>微博</span>
                 </li>
-                <li class="douyin">
+                <li class="douyin commonClass">
                     <i class="iconfont icon-douyin1"></i>
                     <span>抖音</span>
                 </li>
-                <li class="redbook">
+                <li class="redbook commonClass">
                     <i class="iconfont icon-xiaohongshu"></i>
                     <span>小红书</span>
                 </li>
-                <li class="tencentvideo">
+                <li class="tencentvideo commonClass">
                     <i class="iconfont icon-tengxunshipin"></i>
                     <span>腾讯视频</span>
                 </li>
-                <li class="phone">
+                <li class="phone commonClass">
                     <i class="iconfont icon-dianhua"></i>
                     <span>17692708968</span>
                 </li>
@@ -158,7 +159,23 @@
     .phone:hover > i {
         color: #fbcf00;
     }
-
+    .commonClass{
+        position: relative;
+        &>img{
+            display: none;
+        }
+        &:hover{
+          &>img{
+              display: block;
+              position: absolute;
+              width:10vw;
+              height: 15vh;
+              left:70%;
+              top:0;
+          }
+        }
+        
+    }
     @keyframes moveInfinit {
         0% {
             transform: translateY(30%);

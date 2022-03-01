@@ -6,7 +6,7 @@
             <span style="font-size: 20px; color: rgb(190, 167, 139); text-transform: uppercase;">NEW PRODUCT APPRECIATION</span>
             <span class="line"></span>
             <ul class="prouductslist clearfix">
-                <li v-for="(item,index) in productsList" :key="index" class="productItem">
+                <li v-for="(item,index) in productsList" :key="index" class="productItem" >
                     <img :src="item.src" alt="">
                     <span>{{item.name}}</span>
                 </li>
