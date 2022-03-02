@@ -73,7 +73,7 @@
 
 <style scoped lang="less">
     .footContainer {
-        width: 100%;
+        // width: 100%;
         min-height: 300px;
         background: #1b1b1b;
         padding: 48px 15px 15px;
