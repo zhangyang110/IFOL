@@ -7,7 +7,7 @@ const resolve = (dir) => path.join(__dirname, './', dir);
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin')
 
 module.exports = {
-    publicPath: './',
+    publicPath: '',
     outputDir: 'dist',
     assetsDir: "static",
     lintOnSave:false,
@@ -23,7 +23,7 @@ module.exports = {
                 }
             },
             "/ifol": {
-                 target: "http://10.10.254.161:8888",
+                target: "http://10.10.254.161:8888",
                 changeOrigin: true,
                 pathRewrite: {
                     "^/ifol": ""

@@ -86,7 +86,9 @@
 <script>
 import Products from "./products";
 import Foot from "./foot";
-import { getHomeCarousel } from "@/service/usedApi.js";
+import { getHomeCarousel } from "@/service/ifolApi.js";
+import axios from "axios";
+
 export default {
   name: "homePage",
   mounted() {
@@ -122,7 +124,9 @@ export default {
       this.$router.push({ path: "/productDetail" });
     },
     getImgList() {
-      getHomeCarousel().then((res) => {
+      getHomeCarousel({
+          a:1,
+      }).then((res) => {
         console.log(res);
       });
     },

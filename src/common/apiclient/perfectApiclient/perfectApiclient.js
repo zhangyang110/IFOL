@@ -145,6 +145,7 @@ class ApiClient {
                         resolve(response)
                     }
                 } else {
+                    console.log(response,6666);
                     reject({
                         responseCode: REQUEST_FAIL,
                         responseMsg: '服务器异常'

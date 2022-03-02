@@ -8,7 +8,7 @@ import apiClient from "@/common/apiclient/perfectApiclient/perfectApiclient";
 
 export function getHomeCarousel(params) {
     return apiClient.request({
-        url: '/ifo/getHomeCarousel',
+        url: '/ifol/getHomeCarousel',
         type: 'post',
         data: params,
     })

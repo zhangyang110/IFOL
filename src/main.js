@@ -9,7 +9,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import echarts from 'echarts'
 //模拟数据
-import './mock'
+// import './mock'
 import AMap from 'vue-amap';
 Vue.use(AMap);
 
