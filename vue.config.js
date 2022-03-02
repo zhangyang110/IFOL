@@ -10,6 +10,7 @@ module.exports = {
     publicPath: './',
     outputDir: 'dist',
     assetsDir: "static",
+    lintOnSave:false,
     devServer: {
         port: 8080,
         open:true,
@@ -20,8 +21,15 @@ module.exports = {
                 pathRewrite: {
                     "^/api": ""
                 }
+            },
+            "/ifol": {
+                 target: "http://10.10.254.161:8888",
+                changeOrigin: true,
+                pathRewrite: {
+                    "^/ifol": ""
+                }
             }
-        }
+        },
     },
     css: {
         loaderOptions: {
