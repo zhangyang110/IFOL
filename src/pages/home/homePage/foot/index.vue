@@ -45,10 +45,10 @@
         </div>
         <div class="foot-bottom">
             <div>©2020 誉蚨隆（中国）贸易有限公司 保留所有权利</div>
-            <div style="display: flex;align-items: center;margin-left: 40px">
+            <!-- <div style="display: flex;align-items: center;margin-left: 40px">
                 <span class="police"></span>
                 <span>冀公网安备&nbsp;&nbsp; xxxxxxxxxxxx号 </span>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
